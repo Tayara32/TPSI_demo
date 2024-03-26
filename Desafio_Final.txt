@@ -1,0 +1,105 @@
+Algoritmo avaliacao1
+
+Inicio
+
+	int anoAtual, anoNascimento, idade, cont = 1 ;
+	
+	escrever "Insira o ano atual: ";
+	ler anoAtual;
+	
+	enquanto (cont <= 10) fazer
+	
+		escrever "Insira o ano de nascimento: ";
+		ler anoNascimento;
+		
+		idade = anoAtual - anoNascimento;
+		
+			se (idade >= 18) entao
+				escrever "Parabéns, podes tirar a carta de condução!"
+				senao 
+					escrever "Ainda não tens idade para tirar a carta de condução!"
+			fimse
+	cont++;
+	
+	fimenquanto
+
+Fim
+-----------------------------------------------------------------------------------------
+Algoritmo avaliacao2
+
+Inicio
+	
+	int precoFinal, numVisitasEstudo; 
+	int MENSALIDADE = 250;
+	int JUDO = 20;
+	int NATACAO = 25;
+	int VISITA = 5;
+	char aulaJudo, aulaNatacao;
+	
+	
+	escrever "A criança teve aulas de judo? (s/n): ";
+    ler aulaJudo;
+	
+    escrever "A criança teve aulas de natação? (s/n): ";
+    ler aulaNatacao;
+	
+    escrever "Quantas visitas de estudo a criança teve? ";
+    ler numVisitasEstudo;
+
+    precoFinal = MENSALIDADE;
+
+		Se (aulaJudo = 's' || 'S') então
+			precoFinal = precoFinal + JUDO;
+		FimSe
+
+		Se (aulaNatacao = 's' || 'S') então
+			precoFinal = precoFinal + NATACAO;
+		FimSe
+
+    precoFinal = precoFinal + (numVisitasEstudo * VISITA);
+
+    escrever "O valor da mensalidade a pagar será de: ", precoFinal, "€"
+	
+Fim
+-----------------------------------------------------------------------------------------
+Algoritmo avaliacao3
+
+Inicio
+	
+
+	real num, dobro = 0, quarta_parte = 0;
+	
+	escrever "Indique um número: ";
+	ler num;
+	
+	se (num >= 150) && (num <= 250) entao
+		dobro = num * 2;
+		escrever "O dobro do número é: ", dobro;
+	senao
+		quarta_parte = num * 0.25;
+		escrever "A quarta parte do número é: ", quarta_parte;
+	fimse
+	
+
+Fim
+-----------------------------------------------------------------------------------------
+Algoritmo avaliacao5
+
+Inicio
+
+	int num;
+	
+	escrever "Indique um número: ";
+	ler num;
+	
+		enquanto num < 0 fazer
+			escrever "ERRO! Números negativos não são permitidos, por favor insira outro número: ";
+			ler num;
+		fimenquanto
+		
+		se (num % 2 == 0) entao
+			escrever "O número é par!";
+		senao
+			escrever "O número é ímpar!";
+		fimse
+Fim
